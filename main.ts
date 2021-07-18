@@ -9,7 +9,7 @@ microIoT.SERVERS.English
 )
 microIoT.microIoT_showUserText(0, wifi_name)
 basic.forever(function () {
-    microIoT.microIoT_SendMessage(convertToText(pins.analogReadPin(AnalogPin.P0)), microIoT.TOPIC.topic_0)
-    microIoT.microIoT_showUserText(2, "light: " + pins.analogReadPin(AnalogPin.P0))
+    microIoT.microIoT_SendMessage(convertToText(1023 - pins.analogReadPin(AnalogPin.P0)), microIoT.TOPIC.topic_0)
+    microIoT.microIoT_showUserText(2, "Light: " + (1023 - pins.analogReadPin(AnalogPin.P0)))
     basic.pause(5000)
 })
